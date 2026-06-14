@@ -6,6 +6,7 @@
 //
 
 import Foundation
+//import co
 
 struct MenuItem:Identifiable, Codable {
     
@@ -18,10 +19,17 @@ struct MenuItem:Identifiable, Codable {
     let carbs:Int
     let image:String
     
-    enum Codingkeys:String,CodingKey {
+    enum CodingKeys:String,CodingKey {
+        
+        case id
+        case price
+        case calories
+        case protein
+        case carbs
         case appetizerName = "name"
         case foodDescription = "description"
         case image = "imageURL"
+        
     }
     
 }
